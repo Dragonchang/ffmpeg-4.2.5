@@ -472,7 +472,7 @@ static int rkmpp_queue_frame(AVCodecContext *avctx, RKMPPEncoder *encoder,
         info.type   = MPP_BUFFER_TYPE_ION;
         info.size   = desc->objects[0].size;
         info.fd     = desc->objects[0].fd;
-        info.ptr    = desc->objects[0].ptr;
+        //info.ptr    = desc->objects[0].ptr;
         ret = mpp_buffer_import(&buffer, &info);
         if (ret != MPP_OK) {
             av_log(avctx, AV_LOG_ERROR, "Failed to import buffer\n");
